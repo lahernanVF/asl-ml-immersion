@@ -24,7 +24,7 @@ steps:
 # Build the image that encapsulates the TFX pipeline.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/tfxcovertype', '.']
-  dir: pipeline_vertex
+  dir: $_PIPELINE_FOLDER/pipeline_vertex
 
 # Compile the TFX pipeline
 - name: 'gcr.io/$PROJECT_ID/tfx-cli_vertex'
